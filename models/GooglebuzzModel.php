@@ -35,7 +35,7 @@ class GooglebuzzModel extends SourceModel {
 	}
 
 	public function getServiceURL() {
-		return 'http://github.com/' . $this->getProperty('username');
+		return 'http://www.google.com/profiles/' . $this->getProperty('username');
 	}
 
 	public function getServiceDescription() {
@@ -62,7 +62,7 @@ class GooglebuzzModel extends SourceModel {
 	}
 
 	public function updateData() {
-		$url = ' http://buzz.googleapis.com/feeds/' . $this->getProperty( 'username' ) . '/public/posted';
+		$url = 'http://buzz.googleapis.com/feeds/' . $this->getProperty( 'username' ) . '/public/posted';
 
 		$curl = curl_init();
 		curl_setopt($curl, CURLOPT_URL, $url);
@@ -89,17 +89,15 @@ class GooglebuzzModel extends SourceModel {
 		return $items;
 	}
 
-	//! \todo
 	private function processItems( $items ) {
 		$result = array();
 		foreach ($items as $item) {
 			$data = array();
 			$data['title'] = $item->title;
-			$data['repository'] = substr( $item->title, strrpos( $item->title, ' ' ) + 1 );
 			$data['published'] = strtotime( $item->published );
 			$data['content'] = $item->content;
 			$data['link'] = $item->link['href'];
-			$data['github_id'] = $item->id;
+			$data['buzz_id'] = $item->id;
 			$id = $this->addItem( $data, $data['published'], SourceItem::LINK_TYPE, false, false, false, $data['title'] );
 			if ($id) $result[] = $id;
 		}

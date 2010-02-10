@@ -1,10 +1,8 @@
-# THIS PLUGIN DOES NOT WORK #
-
-It is in development, it does not work right now.
-
 # What is this? #
 
 This is a plugin for the Storytlr application.  It allows you to integrate your actions on Google Buzz into the Storytlr lifestream.
+
+Currently it only aggregates items you post, not your activity streams on other entries.
 
 # Installation #
 

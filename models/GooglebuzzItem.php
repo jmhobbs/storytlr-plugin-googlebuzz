@@ -18,11 +18,11 @@
  */
 class GooglebuzzItem extends SourceItem {
 
-	protected $_prefix 	= 'github';
+	protected $_prefix 	= 'googlebuzz';
 
 	protected $_preamble = 'Buzz activity: ';
 
-	public function getContent() { return s$this->_data['content']; }
+	public function getContent() { return $this->_data['content']; }
 
 	public function getTitle () { return $this->_data['title']; }
 
