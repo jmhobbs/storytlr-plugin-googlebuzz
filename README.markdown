@@ -1,3 +1,9 @@
+# README RIGHT NOW #
+
+Currently the Google Buzz plugin is broken! It sets the wrong date for some items, making them show up right around the epoch.  Don't install it right now.
+
+<http://code.google.com/p/storytlr/issues/detail?id=49>
+
 # What is this? #
 
 This is a plugin for the Storytlr application.  It allows you to integrate your actions on Google Buzz into the Storytlr lifestream.
@@ -6,6 +12,7 @@ Currently it only aggregates items you post, not your activity streams on other 
 
 # Installation #
 
+0. Don't install it right now.
 1. Clone this repo into your storytlr/protected/application/plugins/ directory
 2. Rename the directory from "storytlr-plugin-googlebuzz" to "googlebuzz"
 3. Load database.sql into your database
